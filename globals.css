@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --title-active: #000000;
+  --body: #333333;
+  --label: #555555;
+  --placeholder: #888888;
+  --line: #E0CFBA;
+  --input-background: #F9F9F9;
+  --background: #F8F0E7;
+  --off-white: #FCFCFC;
+  --primary: #A8715A;
+  --secondary: #DD8560;
+  --font-sans: 'Tenor Sans', sans-serif;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--body);
+  font-family: var(--font-sans);
+}
+
+html.dark {
+  background-color: var(--title-active);
+  color: var(--off-white);
+  font-family: var(--font-sans);
+}
