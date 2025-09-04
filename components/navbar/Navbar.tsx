@@ -556,7 +556,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="relative sticky top-0 z-40 border-b border-black/10 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-gray-900/70">
+      <header className="sticky-safe z-50 border-b border-black/10 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-gray-900/70">
         <div className="mx-auto grid max-w-6xl grid-cols-3 items-center p-3 sm:p-4">
           {/* Left: hamburger + inline primary links */}
           <div className="flex items-center gap-3">

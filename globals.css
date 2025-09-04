@@ -27,3 +27,32 @@ html.dark {
   color: var(--off-white);
   font-family: var(--font-sans);
 }
+
+
+:root { --safe-top: env(safe-area-inset-top, 20px); }
+
+/* Blur overlay for iOS Dynamic Island / status bar */
+.ios-top-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--safe-top);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(248, 240, 231, 0.6); /* match --background light */
+  pointer-events: none;
+  z-index: 50;
+}
+
+.dark .ios-top-blur-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Sticky header that sits below the blurred safe area */
+@supports (top: env(safe-area-inset-top)) {
+  .sticky-safe {
+    position: sticky;
+    top: var(--safe-top);
+  }
+}

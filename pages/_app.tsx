@@ -17,6 +17,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
         <meta name="color-scheme" content="light dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#F8F0E7" media="(prefers-color-scheme: light)" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="eCommerceApp" />
+        <link rel="apple-touch-icon" href="/icons/icon-180.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(() => {
@@ -32,6 +40,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <div className="min-h-screen bg-[var(--background)] text-[var(--body)] dark:bg-[var(--title-active)] dark:text-[var(--off-white)]">
+        <div className="ios-top-blur-overlay" />
         <Component {...pageProps} />
       </div>
     </QueryClientProvider>
